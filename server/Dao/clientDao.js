@@ -23,6 +23,18 @@
         catch(err){
             callback(err);
         }
-    }
+    };
+
+    module.exports.getLocation = function (callback) {
+        try{
+            var query = "SELECT * from centr";
+            connection.query(query,function (err, data) {
+                callback(err,data);
+            });
+        }
+        catch(err){
+            callback(err);
+        }
+    };
 
 })();

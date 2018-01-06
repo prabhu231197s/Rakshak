@@ -24,4 +24,8 @@
         });
     };
 
+    module.exports.getLocation = function (callback) {
+        clientDao.getLocation(callback);
+    }
+
 })();

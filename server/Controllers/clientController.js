@@ -53,9 +53,28 @@
                     responseHandler.error(res,err);
                 }
                 else{
-                    responseHandler.response(res,data);
+                    var dat = data.Results.output1.value.Values[0];
+                    var val = dat[5];
+                    console.log(val);
+                    responseHandler.response(res,val);
                 }
             });
+        }
+        catch(err){
+            responseHandler.error(res,err);
+        }
+    };
+
+    module.exports.getLocation  = function (req, res) {
+        try{
+            clientService.getLocation(function (err, data) {
+                if(err){
+                    responseHandler.error(res,err);
+                }
+                else{
+                    responseHandler.response(res,data);
+                }
+            })
         }
         catch(err){
             responseHandler.error(res,err);
