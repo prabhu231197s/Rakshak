@@ -44,6 +44,22 @@
         catch (err){
             responseHandler.error(res,err);
         }
+    };
+
+    module.exports.getPrice = function (req, res) {
+        try{
+            clientService.getPrice(req.body,function (err, data) {
+                if(err){
+                    responseHandler.error(res,err);
+                }
+                else{
+                    responseHandler.response(res,data);
+                }
+            });
+        }
+        catch(err){
+            responseHandler.error(res,err);
+        }
     }
 
 })();

@@ -17,5 +17,9 @@
         clientController.getCommodities(req,res);
     });
 
+    router.post('/price',function (req, res) {
+        clientController.getPrice(req,res);
+    });
+
     module.exports = router;
 })();

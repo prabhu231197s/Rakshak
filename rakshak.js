@@ -8,6 +8,7 @@
     var logger = require('morgan');
     var bodyParser = require('body-parser');
     var mailer = require('./server/Configs/mailConfig');
+    var request = require('request');
     var dbHandler = require('./server/Middlewares/dbHandler');
 
     //-------------------------middlewares----------------------------------//
