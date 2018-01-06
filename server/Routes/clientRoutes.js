@@ -9,5 +9,13 @@
         res.send("Hello");
     });
 
+    router.get('/getCentres',function (req, res) {
+        clientController.getCentres(req,res);
+    });
+
+    router.get('/getCommodities',function (req, res) {
+        clientController.getCommodities(req,res);
+    });
+
     module.exports = router;
 })();
