@@ -22,19 +22,31 @@
         clientController.getPrice(req,res);
     });
 
+    router.get('/region',function (req, res) {
+        clientController.getRegion(req,res);
+    });
+
     router.get('/test',function (req, res) {
-        smsService.sendSms(function (err, data) {
+        smsService.sendSms(12,function (err, data) {
             if(err){
                 responseHandler.error(res,err);
             }
             else{
                 responseHandler.response(res,data);
             }
-        })
+        });
     });
 
     router.get('/location',function (req, res) {
         clientController.getLocation(req,res);
+    });
+
+    router.get('/news',function (req, res) {
+        clientController.getNews(req,res);
+    });
+
+    router.post('/query',function (req, res) {
+        clientController.submitQuery(req,res);
     });
 
     module.exports = router;

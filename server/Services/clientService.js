@@ -26,6 +26,18 @@
 
     module.exports.getLocation = function (callback) {
         clientDao.getLocation(callback);
-    }
+    };
+
+    module.exports.getRegions = function (callback) {
+        clientDao.getRegions(callback);
+    };
+
+    module.exports.getNews = function (callback) {
+        clientDao.getNews(callback);
+    };
+
+    module.exports.submitQuery = function (query, callback) {
+        clientDao.submitQuery(query,callback);
+    };
 
 })();
